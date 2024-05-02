@@ -24,3 +24,6 @@ const findTempAmp = function (temps1, temps2) {
 
 const ampTems = findTempAmp(temps1, temps2);
 console.log(`Temerature amplitude is ${ampTems}`);
+document.getElementById(
+  "h3-el"
+).innerText = `Temerature amplitude is ${ampTems}`;
