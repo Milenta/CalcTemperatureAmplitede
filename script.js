@@ -1,7 +1,10 @@
 "use strict";
-const temps = [1, 4, 5, -2, 25, "error"];
+const temps1 = [1, 4, 5, -8, 25, "error"];
+const temps2 = [11, "error", 4, 5, -6, 25, "error", "error"];
 
-const findTempAmp = function (temps) {
+const findTempAmp = function (temps1, temps2) {
+  const temps = temps1.concat(temps2);
+
   let maxTemp = temps[0];
   let minTemp = temps[0];
 
@@ -19,5 +22,5 @@ const findTempAmp = function (temps) {
   return maxTemp - minTemp;
 };
 
-const ampTems = findTempAmp(temps);
+const ampTems = findTempAmp(temps1, temps2);
 console.log(`Temerature amplitude is ${ampTems}`);
